@@ -1,0 +1,429 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>A general discussion on rheology | iDrilling Technologies | Blog | Hydraulics</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="Krishna" content="Blog content related to Rheology by Krishna in iDrilling Technologies">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="A basic understand of rheology. Different rheological models and its parameters. How model parameters are determined.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/favicon.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="../css/vendors.min.css"/>
+        <link rel="stylesheet" href="../css/icon.min.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="../css/responsive.css"/>
+        <link rel="stylesheet" href="../css/consulting.css" />
+        <link rel="stylesheet" href="../css/elearning.css" />
+    </head>
+    <body data-mobile-nav-style="classic">  
+        <!-- start header -->
+        <header class="header-with-topbar">
+            <!-- start header top bar -->
+             <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+            <div class="header-top-bar top-bar-light bg-white disable-fixed md-border-bottom border-color-transparent-dark-very-light">
+                <div class="container-fluid">
+                    <div class="row h-45px align-items-center m-0">
+                        <div class="col-md-6 text-center text-md-start">
+                            <div class="fs-14 text-dark-gray"><a href="contact-us.html" class="text-base-color fw-500 text-decoration-line-bottom">Contact us now</a> for your well design needs!</div>
+                        </div>
+                        <div class="col-6 text-end d-none d-md-flex">
+                            <div class="widget fs-14 me-30px md-me-0"><a href="tel:971521494644" class="text-dark-gray"><i class="feather icon-feather-phone-call text-base-color"></i>+971 52 149 4644</a></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header top bar -->
+            <!-- start navigation -->
+             
+            <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-lg-2 me-auto">
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="" class="default-logo">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="" class="alt-logo">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="" class="mobile-logo"> 
+                        </a>
+                    </div>
+                    <div class="col-auto col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
+                            <ul class="navbar-nav alt-font"> 
+                                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="../about-us.html" class="nav-link">About Us</a></li>
+                                <li class="nav-item dropdown simple-dropdown dropdown-with-icon">
+                                    <a href="../idt-services-2.html" class="nav-link">Services</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li>
+                                            <a href="../well-design-services.html"><i class="line-icon-Gear"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Well Design</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../engineering-modelling.html"><i class="line-icon-Compass-3"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Engineering Modelling</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../offset-well-service.html"><i class="line-icon-Bar-Chart"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Offset Well Analysis</span>
+                                                    <p>Data Analysis</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../drilling-program-services.html"><i class="line-icon-File-Presentation"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Back Office Support</span>
+                                                    <p>Execution Support</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../feasibility-studies-service.html"><i class="line-icon-Glasses-2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Feasibility Studies</span>
+                                                    <p>Drilling Assessment</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../probabilistic-time-cost-service.html"><i class="line-icon-Line-Chart2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Probabilistic Time Estimates</span>
+                                                    <p>Statistical Modelling</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="../our-process.html" class="nav-link">Process</a></li>
+                                <li class="nav-item"><a href="../idt-blog.html" class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a href="../contact-us.html" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-lg-2 text-end md-pe-0">
+                        <div class="header-icon">
+                            <div class="header-search-icon icon">
+                                <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a> 
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="button" class="search-close alt-font">×</button>
+                                    <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-dark-gray fw-600 ls-minus-1px text-center mb-4 alt-font">What are you looking for?</h2>
+                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i> 
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-push-button icon">
+                                <div class="push-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span> 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </nav> 
+            <!-- start push popup -->
+            <div class="push-menu push-menu-style-3 p-50px bg-dark-gray">
+                <span class="close-menu text-dark-gray bg-white"><i class="fa-solid fa-xmark"></i></span>
+                <div class="push-menu-wrapper text-dark-gray" data-scroll-options='{ "theme": "light" }'>
+                    <div class="w-100">
+                        <h4 class="alt-font text-white fw-400 mb-30px d-block w-90 lh-40">Well Engineering Consultancy for <span class="d-inline-block fw-600 border-3 border-bottom border-color-base-color">Oil & Gas Operators</span></h4>
+                    </div>
+                    <div class="col-12">
+                        <ul class="fs-20 ps-0 alt-font">
+                            <li class="pt-10px pb-10px w-100"><a class="linkedin text-white" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin w-30px text-start text-white"></i>Linked In</a></li>
+                        </ul>
+                    </div>
+                    <div class="border-top border-color-transparent-white-light pt-30px w-100">
+                        <span class="fs-24 fw-500 text-white"><a href="tel:+971521494644">+971 52 149 4644</a></span>
+                        <a class="text-white" href="mailto:info@domain.com">admin@idrillingtechnologies.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end push popup -->
+        </header>
+        <!-- start page title -->
+        <section class="ipad-top-space-margin bg-dark-gray cover-background one-fifth-screen d-flex align-items-center" style="background-image: url(../images/work-images/blog-covers/rheology-cover.jpeg)">
+            <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 12,"density": {"enable": true,"value_area": 2000}},"color": {"value": ["#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 1,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":1,"width":1},"move": {"enable": true,"speed":1,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="opacity-light bg-dark-gray"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 position-relative" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [50, 0], "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <div class="d-inline-block mb-20px sm-mb-25px">
+                            <span class="text-white fs-18 opacity-5">
+                                <a class="text-white">10 January 2024</a>
+                                <span class="d-inline-block fs-24 align-top ms-10px me-10px">•</span>
+                                <a class="text-white">Hydraulics</a>
+                            </span>
+                        </div>
+                        <h1 class="text-white w-80 lg-w-80 md-w-70 sm-w-100 fw-500 ls-minus-2px text-white alt-font pb-10px mb-30px overflow-hidden mb-0">A general discussion on rheology</h1>
+                        <div class="text-white fs-18 mt-40px">
+                            <img class="w-80px h-80px rounded-circle me-15px" src="../images/people/krishna-icon.svg" alt="">
+                            <a href="krishna-blog-list.html" class="text-white text-decoration-line-bottom">Sri Krishna</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start section -->
+        <section class="pb-0"> 
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Overview</h5>
+                        <p class="w-90 lg-w-100">Before going into the details of rheology and what it is, let’s consider the effects on external force on a purely solid body such as a block of metal and a fluid body like water. The normal intuition or anyone with a high school level understanding of physics would know that the force required to move any object is directly proportional to its mass. So that means, heavier the object the larger the force required to move</p>
+                        <p class="w-90 lg-w-100">The same principle applies to fluids as well. Since fluids move more freely than solids, fluids are generally considered as a continuum and the force required to move a fluid body is directly proportional to its mass.</p>
+                        <p class="w-90 lg-w-100">Now what happens when the fluid contains suspensions of minute solids particles? Is the force required to move the fluid suspended with solids particles proportional to its mass? The answer is yes of course, but it is no longer directly dependent. Fluids with suspended particles in it are called Particulate Fluids. The force required to move such fluids alters depending on the current velocity of the fluid. The required external force to increase fluid velocity either increases or decreases depending on the composition of the fluid.</p>
+                        <p class="w-90 lg-w-100">Due to these behaviors, the fluids are categorized in to two types. Fluids that have the direct proportional relationship between force and mass are called Newtonian Fluids while those that don’t are called Non-Newtonian Fluids.</p>
+                    </div> 
+                    <div class="col-lg-10 last-paragraph-no-margin">
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-90 md-w-100">Types of Non-Newtonian Fluids</h5>
+                        <p class="w-90 lg-w-100">As explained before, some fluids need progressively lesser force to increase velocity while some need progressively more force. They are respectively termed Shear Thinning & Shear Thickening fluids.</p>
+                        <p class="mb-6 w-90 lg-w-100 font"><em>The word is <strong>Shear</strong> because the fluids move by shearing against the surface it moves on</em></p>
+                        <h5 class="alt-font text-dark-gray fw-500 ls-minus-1px w-90 md-w-100">Shear Thinning</h5>
+                        <p class="w-90 lg-w-100">The exact cause is not yet clear, but the binding theory is that it occurs due to small structural changes within the fluid. For example, if the fluid is a colloidal system, phase separation occurs during fluid flow. This reduces the internal friction in the fluid (commonly called viscosity) thereby leading to Shear Thinning behavior. In polymer systems, shear thinning is caused by disentanglement of polymer chains during flow.</p>
+                        <p class="w-90 lg-w-100">So, in general, when the fluid is static some interconnected network of bonds are present in the fluid structure due two which the initial force required to move the fluid is high. When the fluid starts to move, these bonds are sheared off and internal resistance is reduced.</p>
+                        <p class="w-90 lg-w-100"><em>This is the most commonly observed Non Newtonian fluid behavior.</em></p>
+                        <h5 class="alt-font text-dark-gray fw-500 ls-minus-1px w-90 md-w-100">Shear Thickening</h5>
+                        <p class="w-90 lg-w-100">In this type of fluid, the force required to increase the velocity of the fluid increases. This behavior is expressed only in concentrated suspensions such as food slurries in food processing industries.</p>
+                        <p class="w-90 lg-w-100">The theory behind this behavior is that when the fluid is stationary, voidage is minimum and the liquid present is sufficient to fill the void space. At low fluid velocities, liquid lubricates the motion of each particle, resulting in small stress. At high fluid velocities, the material expands so that there is no longer sufficient liquid to fill the increased void. Therefore, there is nothing to prevent solid-solid contact which increases resistance.</p>
+                    </div>
+                    <div class="col-lg-10 mt-4 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Drilling Fluids</h5>
+                        <p class="w-90 lg-w-100">Drilling fluids are a suspension of weighting agents and other chemicals due to which they have Non-Newtonian behavior. Drilling fluids are generally Shear Thinning. So far there haven’t been any Shear Thickening drilling fluids.</p>
+                        
+                        <p class="w-90 lg-w-100">Now why is this behavior of the fluid important? By characterizing the behavior, we can evaluate the resistance offered by the fluid at various flow velocities.</p>
+                        <p class="w-90 lg-w-100">There are many reasons for circulating drilling fluids, one of which is to transport drilled cuttings to the surface. In order to transport them a minimum threshold fluid velocity is needed which can lift the cuttings by counteracting its weight. This minimum velocity is determined using various methods. Now after the required velocity is determined, the next step is to evaluate the force required to achieve this fluid velocity.</p>
+                        <p class="w-90 lg-w-100">Fluids are pumped from the surface into the drill string out of which the fluid exits the bit nozzles and are returned to the surface along the annulus. The pumps at the surface provide the force for the fluid to move. For fluids this force is evaluated as the pressure for fluid movement. From the fluid velocity we can determine the fluid resistance and from which we determine the pressure required for the fluid to move.</p>
+                    </div> 
+                    <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Rheological Models</h5>
+                        <p class="w-90 lg-w-100">The resistance of the fluid that has been discussed for so long is termed the Viscosity of the fluid. For evaluating viscosity, multiple mathematical models have been developed over the years which accurately determines the fluid resistance. The commonly used models in the field are:
+                            <ul>
+                                <li>Power Law</li>
+                                <li>Hershel Bulkley</li>
+                            </ul>
+                          
+                        </p>
+                        <p class="w-90 lg-w-100">The viscosity profile for Power Law and Hershel Bulkley fluids are the same. The difference is that Hershel Bulkley fluids have another characteristic property called the Yield Point. The Yield Point is basically the threshold force required to make the fluid move from rest. Consider it like inertia for a liquid body. Not all fluids have this property (like water) but there are many lab studies conducted that show the presence of a Yield Point in Non-Newtonian fluids.</p>
+                        <p class="w-90 lg-w-100">Mathematically, the equations for Power Law and Hershel Bulkley have the following form,</p>
+                        <p><em>Power Law : &#x3C4; = K&#x3B3;<sup>n</sup></em></p>
+                        <p><em>Hershel Bulkley : &#x3C4; = &#x3C4;<sub>y</sub> + K&#x3B3;<sup>m</sup></em></p>
+                        <ul>
+                            <li>&#x3C4; - Shear Stress</li>
+                            <li>&#x3C4;<sub>y</sub> - Yield Point</li>
+                            <li>K - Consistency Index</li>
+                            <li>&#x3B3; - Shear Rate</li>
+                            <li>n, m - Flow Behavior Index</li>
+                        </ul>
+                        <p class="w-90 lg-w-100">This clearly looks pretty complex for those not familiar with mathematical models. To make it simple, the shear stress is equivalent to the external force and the shear rate is equivalent to fluid velocity. The ‘K’ is termed Consistency Index which is the value of fluid resistance or Viscosity. The ‘n’ or ‘m’ basically tells us the extent of Non-Newtonian behaviour. If they are less than 1, then the fluid is Shear Thinning and if they are greater than 1, the fluid has Shear Thickening behaviour. If it is equal to 1, then the fluid behaves in a Newtonian manner i.e., the viscosity does not change with increasing fluid velocity.</p>
+                        <p class="w-90 lg-w-100">There are many other rheology models beyond these two models but are more complicated with multiple parameters in it. The details of these models are not discussed here. There are excellent sources available for a detailed explanation of these models.</p>
+                    </div>
+                    <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Model Fitting</h5>
+                        <p class="w-90 lg-w-100">So now we have various models defined. How do we choose the right model? Normally, with lack of enough information drilling engineers generally choose the model which they are comfortable with. The commonly chosen models are either Bingham Plastic (not discussed cause its outdated) or Power Law. The engineer simply decides the PV and YP values he/she desires and then calculates the chosen rheology parameters.</p>
+                        <p class="w-90 lg-w-100">In the field however, we have rheological data obtained from the rheogram readings to determine the rheology that fits drilling fluid that has been prepared. The workings of the equipment are not discussed here but in a simplistic manner, the equipment determines the force needed to move the fluid at various speeds. So, these values are converted to a chart as shown,</p>
+                        <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                            <img src="../images/work-images/blog-covers/dial-readings.png" class="mb-20px" alt="">
+                        </div>
+                        <p class="w-90 lg-w-100">RPM is the shear rate or the speed and the Dial is the shear stress or the force required to move the fluid.</p>
+                        <p class="w-90 lg-w-100">As you would have observed, the data are just points and not a continuous line. With this data a curve fitting algorithm is performed which would identify the model that best fits the data. The end result would be something that looks like the picture below,</p>
+                        <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                            <img src="../images/work-images/blog-covers/Rheogram.png" class="mb-20px" alt="">
+                        </div>
+                        <p class="w-90 lg-w-100">For the example above the best fit rheology model was Power Law and the parameters are:
+                            <ul>
+                                <li>a. K – 5.87</li>
+                                <li>b. n - 0.39</li>
+                            </ul>
+                            Now with these parameters, we can determine the viscosity at any fluid velocity which is what we need. </p>
+                    </div>
+                    <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Final Remarks</h5>
+                        <p class="w-90 lg-w-100">To conclude, all drilling fluids are generally Shear Thinning in nature. It is preferable to have a rheology that has a yield point so that the fluid has suspension characteristics to suspend any cuttings and other solids binding the fluid when the fluid becomes stationary. With the rheological model determined, the pressure required to circulate the fluid can be determined. The critical area to focus on is the annulus (the section where the fluid returns to the surface). If the pressure required in the annulus is too high, then the formation may fracture which leads to many other complications such as loss circulation and well control. Evaluating such requirements can provide the engineer with the limitations of the system during the design stage which allows him/her to put forth contingencies and alternative design options.</p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- end section -->
+        <!-- start section -->
+        <section class="half-section"> 
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row mb-30px">
+                            <div class="tag-cloud col-md-9 text-center text-md-start sm-mb-15px">
+                                <a>Engineering</a> 
+                                <a>Hydraulics</a>
+                                <a>Rheology</a>
+                            </div> 
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-6">
+                                <div class="d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px">
+                                    <div class="w-140px text-center me-50px sm-mx-auto">
+                                        <img src="../images/people/krishna-icon.svg" class="rounded-circle w-120px" alt="">
+                                        <a href="krishna-blog-list.html" class="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Sri Krishna</a>
+                                        <span class="fs-15 lh-20 d-block sm-mb-15px">Co-founder</span>
+                                    </div>
+                                    <div class="w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin">
+                                        <p>Sri Krishna is a drilling engineer and is the co-founder of iDrilling Technologies. He has experience in well engineering and implements modern data science methods to analyze well data and do the well design.</p>
+                                        <a href="krishna-blog-list.html" class="btn btn-link btn-extra-large text-dark-gray mt-15px">All author posts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center elements-social social-icon-style-04">
+                                <ul class="large-icon dark">
+                                    <li><a class="linkedin" href="https://www.linkedin.com/in/sri-krishna-idt" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+        <section class="bg-tranquil"> 
+            <div class="container">
+                <div class="row justify-content-center mb-1">
+                    <div class="col-lg-7 text-center">
+                        <span class="alt-font text-dark-gray fs-19 fw-500 mb-5px d-inline-block ls-minus-05p">You may also like</span>
+                        <h2 class="alt-font text-dark-gray fw-600 ls-minus-3px">Related posts</h2>
+                    </div>
+                </div>
+                <div class="row">  
+                    <div class="col-12 px-0 xs-ps-15px xs-pe-15px">
+                        <ul class="blog-masonry blog-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                            <li class="grid-sizer"></li>
+                            <!-- start blog item -->
+                            <li class="grid-item">
+                                <div class="card border-0 border-radius-4px overflow-hidden box-shadow-large box-shadow-extra-large-hover">
+                                    <div class="card-top d-flex align-items-center">
+                                        <span class="fs-16">By <span class="text-dark-gray fw-600">Sri Krishna</span></span>
+                                        
+                                    </div>
+                                    <div class="blog-image position-relative overflow-hidden">
+                                        <a href="prob-time-estimate.html"><img src="../images/work-images/blog-covers/probabilsitic-cover-small-2.svg" alt="" /></a>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="post-content p-11 md-p-9">
+                                            <a href="prob-time-estimate.html" class="card-title mb-10px fw-600 fs-19 lh-28 text-dark-gray d-inline-block">Methodology for Probabilistic Drilling Time Estimates</a>
+                                            <p class="mb-0">Monte carlo modelling helps in quantifying these uncertainties...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- end blog item -->
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        
+        <!-- end section -->
+       
+        <!-- start footer -->
+        <footer class="footer-light p-0 position-relative">
+            <div id="particles-04" class="position-absolute h-100 top-0 left-0 z-index-minus-1 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="container"> 
+                <div class="row justify-content-between pt-7 sm-pt-50px">
+                    <!-- start footer column -->
+                    <div class="col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px">
+                        <a href="../index.html" class="footer-logo mb-15px md-mb-20px d-inline-block"><img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="idrilling technologies logo"></a>
+                        <p class="mb-20px">Efficiency and value delivered remotely.</p>
+                        <div class="elements-social social-icon-style-02">
+                            <ul class="medium-icon dark icon-with-animation">
+                                <li><a class="facebook" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Company</span>
+                        <ul>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../idt-services-2.html">Services</a></li>
+                            <li><a href="../our-process.html">Process</a></li>
+                            <li><a href="../idt-blog.html">Blog</a></li>
+                            <li><a href="../contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 xs-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Get in touch</span>
+                        
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-phone-call text-dark-gray icon-small me-10px"></i></span><a href="tel:971521494644">+971 52 149 4644</a></p>
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-mail text-dark-gray icon-small me-10px"></i></span><a href="mailto:admin@idrillingtechnologies.com">admin@idrillingtechnologies.com</a></p>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    
+                    <!-- end footer column -->
+                </div> 
+                <div class="row justify-content-center align-items-center pt-5 sm-pt-30px">
+                    <!-- start divider -->
+                    <div class="col-12">
+                        <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
+                    </div>
+                    <!-- end divider -->
+                    <!-- start copyright -->
+                    <div class="col-lg-6 pt-25px pb-25px md-pt-0 fs-16 last-paragraph-no-margin order-2 order-lg-1 text-center text-lg-start"><p>&copy; 2024 Designed by <a href="https://www.idrillingtechnologies.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">iDrilling Technologies</a></p></div>
+                    <!-- end copyright -->
+                   
+                </div>
+            </div> 
+        </footer>
+        <!-- end footer -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/vendors.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+    
+    </body>
+</html>

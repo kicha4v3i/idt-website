@@ -1,0 +1,423 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Methodology for probabilistic drilling time estimates | iDrilling Technologies | Blog | Data Analysis</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="Krishna" content="iDT Blog">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Monte carlo methods to estimate drilling P10, P50 and P90 times.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/favicon.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="../css/vendors.min.css"/>
+        <link rel="stylesheet" href="../css/icon.min.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="../css/responsive.css"/>
+        <link rel="stylesheet" href="../css/consulting.css" />
+        <link rel="stylesheet" href="../css/elearning.css" />
+    </head>
+    <body data-mobile-nav-style="classic">  
+        <!-- start header -->
+        <header class="header-with-topbar">
+            <!-- start header top bar -->
+             <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+            <div class="header-top-bar top-bar-light bg-white disable-fixed md-border-bottom border-color-transparent-dark-very-light">
+                <div class="container-fluid">
+                    <div class="row h-45px align-items-center m-0">
+                        <div class="col-md-6 text-center text-md-start">
+                            <div class="fs-14 text-dark-gray"><a href="contact-us.html" class="text-base-color fw-500 text-decoration-line-bottom">Contact us now</a> for your well design needs!</div>
+                        </div>
+                        <div class="col-6 text-end d-none d-md-flex">
+                            <div class="widget fs-14 me-30px md-me-0"><a href="tel:971521494644" class="text-dark-gray"><i class="feather icon-feather-phone-call text-base-color"></i>+971 52 149 4644</a></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header top bar -->
+            <!-- start navigation -->
+             
+            <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-lg-2 me-auto">
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="" class="default-logo">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="" class="alt-logo">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="" class="mobile-logo"> 
+                        </a>
+                    </div>
+                    <div class="col-auto col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
+                            <ul class="navbar-nav alt-font"> 
+                                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="../about-us.html" class="nav-link">About Us</a></li>
+                                <li class="nav-item dropdown simple-dropdown dropdown-with-icon">
+                                    <a href="../idt-services-2.html" class="nav-link">Services</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li>
+                                            <a href="../well-design-services.html"><i class="line-icon-Gear"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Well Design</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../engineering-modelling.html"><i class="line-icon-Compass-3"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Engineering Modelling</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../offset-well-service.html"><i class="line-icon-Bar-Chart"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Offset Well Analysis</span>
+                                                    <p>Data Analysis</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../drilling-program-services.html"><i class="line-icon-File-Presentation"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Back Office Support</span>
+                                                    <p>Execution Support</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../feasibility-studies-service.html"><i class="line-icon-Glasses-2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Feasibility Studies</span>
+                                                    <p>Drilling Assessment</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../probabilistic-time-cost-service.html"><i class="line-icon-Line-Chart2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Probabilistic Time Estimates</span>
+                                                    <p>Statistical Modelling</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="../our-process.html" class="nav-link">Process</a></li>
+                                <li class="nav-item"><a href="../idt-blog.html" class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a href="../contact-us.html" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-lg-2 text-end md-pe-0">
+                        <div class="header-icon">
+                            <div class="header-search-icon icon">
+                                <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a> 
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="button" class="search-close alt-font">×</button>
+                                    <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-dark-gray fw-600 ls-minus-1px text-center mb-4 alt-font">What are you looking for?</h2>
+                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i> 
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-push-button icon">
+                                <div class="push-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span> 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </nav> 
+            <!-- start push popup -->
+            <div class="push-menu push-menu-style-3 p-50px bg-dark-gray">
+                <span class="close-menu text-dark-gray bg-white"><i class="fa-solid fa-xmark"></i></span>
+                <div class="push-menu-wrapper text-dark-gray" data-scroll-options='{ "theme": "light" }'>
+                    <div class="w-100">
+                        <h4 class="alt-font text-white fw-400 mb-30px d-block w-90 lh-40">Well Engineering Consultancy for <span class="d-inline-block fw-600 border-3 border-bottom border-color-base-color">Oil & Gas Operators</span></h4>
+                    </div>
+                    <div class="col-12">
+                        <ul class="fs-20 ps-0 alt-font">
+                            <li class="pt-10px pb-10px w-100"><a class="linkedin text-white" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin w-30px text-start text-white"></i>Linked In</a></li>
+                        </ul>
+                    </div>
+                    <div class="border-top border-color-transparent-white-light pt-30px w-100">
+                        <span class="fs-24 fw-500 text-white"><a href="tel:+971521494644">+971 52 149 4644</a></span>
+                        <a class="text-white" href="mailto:info@domain.com">admin@idrillingtechnologies.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end push popup -->
+        </header>
+        <!-- start page title -->
+        <section class="ipad-top-space-margin bg-dark-gray cover-background one-fifth-screen d-flex align-items-center" style="background-image: url(../images/work-images/blog-covers/probabilsitic-cover.jpeg)">
+            <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 12,"density": {"enable": true,"value_area": 2000}},"color": {"value": ["#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 1,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":1,"width":1},"move": {"enable": true,"speed":1,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="opacity-light bg-dark-gray"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 position-relative" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [50, 0], "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <div class="d-inline-block mb-20px sm-mb-25px">
+                            <span class="text-white fs-18 opacity-5">
+                                <a class="text-white">16 January 2025</a>
+                                <span class="d-inline-block fs-24 align-top ms-10px me-10px">•</span>
+                                <a class="text-white">Analytics</a>
+                            </span>
+                        </div>
+                        <h1 class="text-white w-60 lg-w-80 md-w-70 sm-w-100 fw-500 ls-minus-2px text-white alt-font mb-30px overflow-hidden mb-0">Methodology for Probabilistic Drilling Time Estimates</h1>
+                        <div class="text-white fs-18 mt-40px">
+                            <img class="w-80px h-80px rounded-circle me-15px" src="../images/people/krishna-icon.svg" alt="">
+                            <a href="krishna-blog-list.html" class="text-white text-decoration-line-bottom">Sri Krishna</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- start section -->
+        <section class="pb-0"> 
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Why do we need Monte Carlo Modelling?</h5>
+                        <p class="w-90 lg-w-100">If you have ever been part of the whole drilling project starting from planning to execution to completion to handover, you would be aware that there all lots of uncertainties that occur which are either beyond your control or wasn’t considered during the planning stage. This affects the timeline of the project and the consequences of those are well known in the industry. Therefore, there was a need for to quantify these uncertainties and put it on paper for those involved in the decision-making process to understand the extent of variation in the estimate of the Drilling Time. </p>
+                            <p>For example, the Rate of Penetration (ROP) while drilling varies based on the bit type, other drilling parameters and the formation properties. These properties are not uniform. 
+                            The ROP therefore varies based on the depth and these factors and is not a constant. Similarly, there would be uncertainties in the times for all the operations involved in the drilling campaign.</p>
+
+                            <p>Monte carlo modelling helps in quantifying these uncertainties backed up by relevant and sound data. Instead of using a single estimate of time, monte carlo method uses probabilistic methods to forecast the time for each operation and in total for the whole well.</p>
+                    </div> 
+                    <div class="col-lg-10 last-paragraph-no-margin">
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-90 md-w-100">The Monte Carlo method</h5>
+                        <p class="mb-6 w-90 lg-w-100">The origins and history of the Monte Carlo method are not discussed here. Many sources can be found online if the reader is interested. We will merely discuss about how it is used in drilling time estimates. Before we dive in, the MC method is basically a method in which multiple random experiments and simulations are performed. Ideally around a thousand simulations are performed and is more than enough in the case we are dealing with. The basic idea to run multiple experiments with the system of interest. In this case we simulate drilling thousand wells. Ideally the best method to run the experiment is to actually drill the well a thousand times and then get the time taken for each activity. Now, this is totally impractical and doesn’t serve our requirements. Instead, for each drilling activity we randomly sample a specific value of time from an appropriate probability distribution and then calculate the total time taken for the well. Do this a thousand times and we have a Monte Carlo simulation of the well. With this result, we can determine the minimum, the maximum and the average time it takes to drill the well and determine the variability (which is the uncertainty).</p>
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-90 md-w-100">How does it work?</h5>
+                        <h5 class="alt-font text-dark-gray fw-400 ls-minus-1px w-90 md-w-100">1. Identify Parameters</h5>
+                        <p class="w-90 lg-w-100">First thing’s first, you need to list down all the activities that are going to take place in the well. Now, for each activity you need to identify the parameters that affect its duration. For example, as stated before, the drilling time is affected by the ROP. For tripping time, it would be the tripping speed and so on. There are some activities that won’t have any direct parameters such as Nipple Up BOP or Wellhead Installation. For these activities you simple the time taken to complete the activity would be the parameter to model.</p>
+                        <h5 class="alt-font text-dark-gray fw-400 ls-minus-1px w-90 md-w-100">2. Assign a Probability Distribution for the Parameters</h5>
+                        <p class="w-90 lg-w-100">This step is the most crucial one because the model is sensitive to the type of distribution. If an erroneous distribution is selected for the parameter, then model would produce an error in the estimate. 
+                            There are many types of distributions that are typically considered. The most common being:
+                            <ol>
+                                <li>Uniform</li>
+                                <li>Normal</li>
+                                <li>Lognormal</li>
+                                <li>Beta</li>
+                                <li>Weibull</li>
+                                <li>Gamma and so on</li>
+                            </ol>
+                        </p>
+                        <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                            <img src="../images/work-images/blog-covers/prob-dist.jpg" class="mb-20px" alt="">
+                   
+                        </div>
+                        <p>Each of these distributions will have its own set of parameters that describe the probability curve. Either an educated guess can be used to set these parameters or you can use the actual time taken in offset wells to get the best fit distribution to get the required parameters. The latter method is more accurate but is tedious and would be close to impossible to do if there isn’t any well data - for each parameter at least 30 data points are required as a general rule of thumb to get an accurate description of the distribution.</p>
+                        <h5 class="alt-font text-dark-gray fw-400 ls-minus-1px w-90 md-w-100">3. Run the Monte Carlo Simulation</h5>
+                        <p class="w-90 lg-w-100">This is the best part. You can now run the simulation as many times as you want. Running the simulation a thousand times would be suitable enough. So how does the simulation work?</p>
+                        <p>For each run of the simulation, the model will randomly sample a value from the probability distribution for each activity. This simulates one random outcome for the activities' duration. The sum of the duration for each activity will give you the total well time. This is one random outcome for the well. Do this a thousand times and you get a thousand random outcomes for the well time estimate.</p>
+                        
+                        <h5 class="alt-font text-dark-gray fw-400 ls-minus-1px w-90 md-w-100">4. Summarise the Results</h5>
+                        <p class="w-90 lg-w-100">Now you will have multiple time estimates for the well. You have the overall probability distribution for the total well time which is the final goal required. A range of possible time estimates for the well can be identified inside a confidence interval. For example we can say that there is a 10% chance or probability that the “well would take less than or equal 25 days to drill and a 90% change it will exceed 25 days”. Read the statement again and you will see the words less than or equal or Exceeding. For the same case, the usual interpretation which is unfortunately understood by many is that “10 out of 1000 wells drilled with take 25 days”. This statement doesn’t make any sense for the fact that the same well is not going to be drilled 1000 times and moreover that’s not what a probability distribution models in the first place.</p>
+                        
+                    </div>
+                    <div class="col-lg-10 mt-4 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Understand the Simulation</h5>
+                        <p class="w-90 lg-w-100">So now we have a range of possible outcomes for the total well time. Using this information, a histogram can be drawn up as shown here, which describes the distribution in terms of frequency of recurrence. This can be converted to a probabilistic data but will have the same shape and spread. Only the Y axis would change where instead of Frequency you would have the probabilities.</p>
+                        <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                            <img src="../images/work-images/blog-covers/prob-summary.png" class="mb-20px" alt="">
+                        </div>
+                        <p class="w-90 lg-w-100">Therefore, the total well time will also have distribution parameters such as mean, median, mode, variance and standard deviation (among others). Although this is crucial information for a Q&A Engineer, for a drilling engineer, well manager or other management professionals, their interests lie in simply the variation in time for the whole well.</p>
+                        <p class="w-90 lg-w-100">A simplified result which is more useful is to have confidence interval for time within which the well can be drilled. The usual standards are to have the 10%, 50% and 90% confidence interval. This is termed as the P10, P50 and P90 estimates as shown below. Some operators also prefer to have P30 and P70 times (30% and 70% Confidence Intervals). The more inquisitive reader would have asked then question “Would there be 0% and 100% confidence intervals, or P0 and P100 estimates?” and the answer is “Yes”. The P0 and P100 times are simply the minimum and maximum time obtained from the simulated well time distribution respectively. This brings the discussion again to the interpretation. When you consider P0 time, it does not mean that 0% of the wells take – 68 days in this case -  to drill (Again, the statement makes no sense). It actually means that the time taken to drill the well is definitely more than 68 days. The same interpretation goes for all the other Pt times. P100 would mean that the well time would never exceed the P100 estimate - 86 days here - and rather it would less than the P100 estimate.</p>
+                        <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                            <img src="../images/work-images/blog-covers/prob-dist2.jpg" class="mb-20px" alt="">
+                        </div>
+                    </div> 
+                    <div class="col-lg-10 mt-4 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Time vs Depth Chart</h5>
+                        <p class="w-90 lg-w-100">Once the Probabilistic Estimates for the total well time is ready, now the Time vs Depth chart will be prepared like the one here.</p>
+                        <div class="col-lg-10 mb-6 sm-mb-35px last-paragraph-no-margin text-center">
+                            <img src="../images/work-images/blog-covers/tvd.jpg" class="mb-20px" alt="">
+                        </div>
+                        <p class="w-90 lg-w-100">The Time vs Depth chart is the final result of this process. Although it can't be observed directly here, the Time vs Depth chart here is actually the cumulative activity time distribution at every depth.</p>
+                        <p class="w-90 lg-w-100">P10, P50 and P90 are the usually represented time estimates in the chart, but you can also include the Minimum and Maximum time estimates as well. Moreover many Operators include the P30 and P70 time estimates. </p>
+                    </div>
+                    <div class="col-lg-10 mt-4 mb-6 sm-mb-35px last-paragraph-no-margin"> 
+                        <h5 class="alt-font text-dark-gray fw-600 ls-minus-1px w-95 md-w-100">Conclusion</h5>
+                        <p class="w-90 lg-w-100">As you can see, the entire process requires time, computational effort and more importantly accurate assumptions and distribution of your parameters. Given all of these requirements, allows us to understand uncertainty and risks.</p>
+
+                        <p class="w-90 lg-w-100">This article describes briefly the workflow of Monte Carlo in Drilling Time Estimates. The internal working and statistical analyses involved are detailed. To understand the statistical methods used, a complete study on Random Processes and Applied Probability is required. There are many references and online materials available to understand the basics of probability.</p>
+                            
+                        <p class="w-90 lg-w-100">Finally, talking about risks, there are methods to include unforeseen risks in the time estimate such as Stuck Pipe, Loss Circulation, Well Control incidents etc., and other Non-Productive Times. These will be discussed in another article in the series. </p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- end section -->
+        <!-- start section -->
+        <section class="half-section"> 
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row mb-30px">
+                            <div class="tag-cloud col-md-9 text-center text-md-start sm-mb-15px">
+                                <a>Analytics</a> 
+                                <a>Probability</a>
+                                <a>Data Science</a>
+                                <a>Management</a>
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-6">
+                                <div class="d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-7 sm-p-35px">
+                                    <div class="w-140px text-center me-50px sm-mx-auto">
+                                        <img src="../images/people/krishna-icon.svg" class="rounded-circle w-120px" alt="">
+                                        <a href="krishna-blog-list.html" class="text-dark-gray fw-500 mt-20px d-inline-block lh-20">Sri Krishna</a>
+                                        <span class="fs-15 lh-20 d-block sm-mb-15px">Co-founder</span>
+                                    </div>
+                                    <div class="w-75 sm-w-100 text-center text-md-start last-paragraph-no-margin">
+                                        <p>Sri Krishna is a drilling engineer and is the co-founder of iDrilling Technologies. He has experience in well engineering and implements modern data science methods to analyze well data and do the well design.</p>
+                                        <a href="krishna-blog-list.html" class="btn btn-link btn-extra-large text-dark-gray mt-15px">All author posts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center elements-social social-icon-style-04">
+                                <ul class="large-icon dark">
+                                    <li><a class="linkedin" href="https://www.linkedin.com/in/sri-krishna-idt" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+        <section class="bg-tranquil"> 
+            <div class="container">
+                <div class="row justify-content-center mb-1">
+                    <div class="col-lg-7 text-center">
+                        <span class="alt-font text-dark-gray fs-19 fw-500 mb-5px d-inline-block ls-minus-05p">You may also like</span>
+                        <h2 class="alt-font text-dark-gray fw-600 ls-minus-3px">Related posts</h2>
+                    </div>
+                </div>
+                <div class="row">  
+                    <div class="col-12 px-0 xs-ps-15px xs-pe-15px">
+                        <ul class="blog-masonry blog-wrapper grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-1col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                            <li class="grid-sizer"></li>
+                            <!-- start blog item -->
+                            <li class="grid-item">
+                                <div class="card border-0 border-radius-4px overflow-hidden box-shadow-large box-shadow-extra-large-hover">
+                                    <div class="card-top d-flex align-items-center">
+                                        <span class="fs-16">By <span class="text-dark-gray fw-600">Sri Krishna</span></span>
+                                        
+                                    </div>
+                                    <div class="blog-image position-relative overflow-hidden">
+                                        <a href="general-rheology-discussion.html"><img src="../images/work-images/blog-covers/rheology-cover-small-2.svg" alt="" /></a>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="post-content p-11 md-p-9">
+                                            <a href="general-rheology-discussion.html" class="card-title mb-10px fw-600 fs-19 lh-28 text-dark-gray d-inline-block">A general discussion on rheology</a>
+                                            <p class="mb-0">Some fluids need progressively lesser force to increase velocity...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- end blog item -->
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        
+        
+        <!-- start footer -->
+        <footer class="footer-light p-0 position-relative">
+            <div id="particles-04" class="position-absolute h-100 top-0 left-0 z-index-minus-1 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="container"> 
+                <div class="row justify-content-between pt-7 sm-pt-50px">
+                    <!-- start footer column -->
+                    <div class="col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px">
+                        <a href="../index.html" class="footer-logo mb-15px md-mb-20px d-inline-block"><img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="idrilling technologies logo"></a>
+                        <p class="mb-20px">Efficiency and value delivered remotely.</p>
+                        <div class="elements-social social-icon-style-02">
+                            <ul class="medium-icon dark icon-with-animation">
+                                <li><a class="facebook" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Company</span>
+                        <ul>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../idt-services-2.html">Services</a></li>
+                            <li><a href="../our-process.html">Process</a></li>
+                            <li><a href="../idt-blog.html">Blog</a></li>
+                            <li><a href="../contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 xs-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Get in touch</span>
+                        
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-phone-call text-dark-gray icon-small me-10px"></i></span><a href="tel:971521494644">+971 52 149 4644</a></p>
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-mail text-dark-gray icon-small me-10px"></i></span><a href="mailto:admin@idrillingtechnologies.com">admin@idrillingtechnologies.com</a></p>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    
+                    <!-- end footer column -->
+                </div> 
+                <div class="row justify-content-center align-items-center pt-5 sm-pt-30px">
+                    <!-- start divider -->
+                    <div class="col-12">
+                        <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
+                    </div>
+                    <!-- end divider -->
+                    <!-- start copyright -->
+                    <div class="col-lg-6 pt-25px pb-25px md-pt-0 fs-16 last-paragraph-no-margin order-2 order-lg-1 text-center text-lg-start"><p>&copy; 2024 Designed by <a href="https://www.idrillingtechnologies.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">iDrilling Technologies</a></p></div>
+                    <!-- end copyright -->
+                   
+                </div>
+            </div> 
+        </footer>
+        <!-- end footer -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/vendors.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Articles | Blog | iDrilling Technologies</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="Krishna" content="iDT Blog">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Monte carlo methods to estimate drilling P10, P50 and P90 times.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../images/favicon/favicon.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="../css/vendors.min.css"/>
+        <link rel="stylesheet" href="../css/icon.min.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="../css/responsive.css"/>
+        <link rel="stylesheet" href="../css/consulting.css" />
+        <link rel="stylesheet" href="../css/elearning.css" />
+    </head>
+    <body data-mobile-nav-style="classic">  
+        <!-- start header -->
+        <header class="header-with-topbar">
+            <!-- start header top bar -->
+             <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+            <div class="header-top-bar top-bar-light bg-white disable-fixed md-border-bottom border-color-transparent-dark-very-light">
+                <div class="container-fluid">
+                    <div class="row h-45px align-items-center m-0">
+                        <div class="col-md-6 text-center text-md-start">
+                            <div class="fs-14 text-dark-gray"><a href="../contact-us.html" class="text-base-color fw-500 text-decoration-line-bottom">Contact us now</a> for your well design needs!</div>
+                        </div>
+                        <div class="col-6 text-end d-none d-md-flex">
+                            <div class="widget fs-14 me-30px md-me-0"><a href="tel:971521494644" class="text-dark-gray"><i class="feather icon-feather-phone-call text-base-color"></i>+971 52 149 4644</a></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header top bar -->
+            <!-- start navigation -->
+             
+            <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-lg-2 me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="" class="default-logo">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="" class="alt-logo">
+                            <img src="../images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="" class="mobile-logo"> 
+                        </a>
+                    </div>
+                    <div class="col-auto col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav"> 
+                            <ul class="navbar-nav alt-font"> 
+                                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="../about-us.html" class="nav-link">About Us</a></li>
+                                <li class="nav-item dropdown simple-dropdown dropdown-with-icon">
+                                    <a href="../idt-services-2.html" class="nav-link">Services</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li>
+                                            <a href="../well-design-services.html"><i class="line-icon-Gear"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Well Design</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../engineering-modelling.html"><i class="line-icon-Compass-3"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Engineering Modelling</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../offset-well-service.html"><i class="line-icon-Bar-Chart"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Offset Well Analysis</span>
+                                                    <p>Data Analysis</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../drilling-program-services.html"><i class="line-icon-File-Presentation"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Back Office Support</span>
+                                                    <p>Execution Support</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../feasibility-studies-service.html"><i class="line-icon-Glasses-2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Feasibility Studies</span>
+                                                    <p>Drilling Assessment</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="../probabilistic-time-cost-service.html"><i class="line-icon-Line-Chart2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Probabilistic Time Estimates</span>
+                                                    <p>Statistical Modelling</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="../our-process.html" class="nav-link">Process</a></li>
+                                <li class="nav-item"><a href="../idt-blog.html" class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a href="../contact-us.html" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-lg-2 text-end md-pe-0">
+                        <div class="header-icon">
+                            <div class="header-search-icon icon">
+                                <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a> 
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="button" class="search-close alt-font">×</button>
+                                    <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-dark-gray fw-600 ls-minus-1px text-center mb-4 alt-font">What are you looking for?</h2>
+                                            <input class="search-input alt-font" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="s" value="" type="text" autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i> 
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="header-push-button icon">
+                                <div class="push-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span> 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+            <!-- start push popup -->
+            <div class="push-menu push-menu-style-3 p-50px bg-dark-gray">
+                <span class="close-menu text-dark-gray bg-white"><i class="fa-solid fa-xmark"></i></span>
+                <div class="push-menu-wrapper text-dark-gray" data-scroll-options='{ "theme": "light" }'>
+                    <div class="w-100">
+                        <h4 class="alt-font text-white fw-400 mb-30px d-block w-90 lh-40">Well Engineering Consultancy for <span class="d-inline-block fw-600 border-3 border-bottom border-color-base-color">Oil & Gas Operators</span></h4>
+                    </div>
+                    <div class="col-12">
+                        <ul class="fs-20 ps-0 alt-font">
+                            <li class="pt-10px pb-10px w-100"><a class="linkedin text-white" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin w-30px text-start text-white"></i>Linked In</a></li>
+                        </ul>
+                    </div>
+                    <div class="border-top border-color-transparent-white-light pt-30px w-100">
+                        <span class="fs-24 fw-500 text-white"><a href="tel:+971521494644">+971 52 149 4644</a></span>
+                        <a class="text-white" href="mailto:info@domain.com">admin@idrillingtechnologies.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end push popup -->
+        </header>
+        <!-- start page title -->
+         
+        <section class="ipad-top-space-margin bg-dark-gray cover-background page-title-big-typography" style="background-image: url('../images/work-images/personal-blog-cover.jpg')">
+            <div class="background-position-center-top h-100 w-100 position-absolute left-0px top-0" style="background-image: url('images/vertical-line-bg-small.svg')"></div>
+            <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 8,"density": {"enable": true,"value_area": 2000}},"color": {"value": ["#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 1,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":1,"width":1},"move": {"enable": true,"speed":1,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="container">
+                <div class="row align-items-center extra-small-screen">
+                    
+                    <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9 position-relative page-title-extra-small" data-anime='{ "el": "childs", "translateY": [-15, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h1 class="mb-20px alt-font text-white">Blogs</h1>
+                        <h2 class="fw-500 m-0 ls-minus-2px text-white alt-font">Shri Vignesh</h2>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end page title -->
+        <section id="down-section" class="background-position-center-top sm-background-image-none">
+            <div class="container articles-list">  
+                <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <li class="grid-sizer"></li>
+                    <!-- start blog item -->
+                    <li class="grid-item">
+                        <div class="card border-0 border-radius-4px box-shadow-quadruple-large box-shadow-quadruple-large-hover">
+                            <div class="blog-image">
+                                <a href="well-integrity-life-cycle.html" class="d-block"><img src="../images/work-images/blog-covers/well-integrity-small.svg" alt="" /></a>
+                                <div class="blog-categories">
+                                    <a class="categories-btn bg-white text-dark-gray text-dark-gray-hover text-uppercase alt-font fw-700">Well Integrity</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-13 md-p-11">
+                                <a href="well-integrity-life-cycle.html" class="card-title mb-15px alt-font fw-700 fs-18 lh-30 text-dark-gray text-dark-gray-hover d-inline-block">Well Integrity and the life cycle of a well</a>
+                                <p>‘Well Integrity’ is essentially a crucial component in...</p>
+                                <div class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-14 text-uppercase">
+                                    <div class="me-auto">
+                                        <span class="blog-date d-inline-block">13 January 2024</span>
+                                        <div class="d-inline-block author-name">By <a href="vignesh-blog-list.html" class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom fw-500">Shri Vignesh</a></div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- end blog item -->
+                    <!-- start blog item -->
+                    <li class="grid-item">
+                        <div class="card border-0 border-radius-4px box-shadow-quadruple-large box-shadow-quadruple-large-hover">
+                            <div class="blog-image">
+                                <a href="well-integrity-the-barrier-envelope-principle.html" class="d-block"><img src="../images/work-images/blog-covers/well-integrity-2-reduced.svg" alt="" /></a>
+                                <div class="blog-categories">
+                                    <a class="categories-btn bg-white text-dark-gray text-dark-gray-hover text-uppercase alt-font fw-700">Well Integrity</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-13 md-p-11">
+                                <a href="well-integrity-the-barrier-envelope-principle.html" class="card-title mb-15px alt-font fw-700 fs-18 lh-30 text-dark-gray text-dark-gray-hover d-inline-block">Well Integrity: The 2 – Barrier Envelope Principle</a>
+                                <p>Well Barriers and well barrier elements are specifically...</p>
+                                <div class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-14 text-uppercase">
+                                    <div class="me-auto">
+                                        <span class="blog-date d-inline-block">31 January 2024</span>
+                                        <div class="d-inline-block author-name">By <a href="vignesh-blog-list.html" class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom fw-500">Shri Vignesh</a></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- end blog item -->
+                    <!-- start blog item -->
+                    <li class="grid-item">
+                        <div class="card border-0 border-radius-4px box-shadow-quadruple-large box-shadow-quadruple-large-hover">
+                            <div class="blog-image">
+                                <a href="well-barrier-identification.html" class="d-block"><img src="../images/work-images/blog-covers/well-integrity-2-reduced.svg" alt="" /></a>
+                                <div class="blog-categories">
+                                    <a class="categories-btn bg-white text-dark-gray text-dark-gray-hover text-uppercase alt-font fw-700">Well Integrity</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-13 md-p-11">
+                                <a href="well-barrier-identification.html" class="card-title mb-15px alt-font fw-700 fs-18 lh-30 text-dark-gray text-dark-gray-hover d-inline-block">Well Barrier Identification and Barrier Diagrams</a>
+                                <p>When a well is constructed section by section, during any...</p>
+                                <div class="author d-flex justify-content-center align-items-center position-relative overflow-hidden fs-14 text-uppercase">
+                                    <div class="me-auto">
+                                        <span class="blog-date d-inline-block">3 February 2024</span>
+                                        <div class="d-inline-block author-name">By <a href="vignesh-blog-list.html" class="text-dark-gray text-dark-gray-hover text-decoration-line-bottom fw-500">Shri Vignesh</a></div>
+                                    </div>
+                                     
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- end blog item -->
+                    
+                     
+                </ul>
+                
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->
+        
+        <!-- end section -->
+        <!-- start footer -->
+        <footer class="footer-light p-0 position-relative">
+            <div id="particles-04" class="position-absolute h-100 top-0 left-0 z-index-minus-1 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="container"> 
+                <div class="row justify-content-between pt-7 sm-pt-50px">
+                    <!-- start footer column -->
+                    <div class="col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px">
+                        <a href="index.html" class="footer-logo mb-15px md-mb-20px d-inline-block"><img src="../images/iDT Logo - Transparent Background.png" data-at2x="../images/iDT Logo - Transparent Background.png" alt="idrilling technologies logo"></a>
+                        <p class="mb-20px">Efficiency and value delivered remotely.</p>
+                        <div class="elements-social social-icon-style-02">
+                            <ul class="medium-icon dark icon-with-animation">
+                                <li><a class="facebook" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Company</span>
+                        <ul>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../idt-services-2.html">Services</a></li>
+                            <li><a href="../our-process.html">Process</a></li>
+                            <li><a href="../idt-blog.html">Blog</a></li>
+                            <li><a href="../contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 xs-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Get in touch</span>
+                        
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-phone-call text-dark-gray icon-small me-10px"></i></span><a href="tel:971521494644">+971 52 149 4644</a></p>
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-mail text-dark-gray icon-small me-10px"></i></span><a href="mailto:admin@idrillingtechnologies.com">admin@idrillingtechnologies.com</a></p>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    
+                    <!-- end footer column -->
+                </div> 
+                <div class="row justify-content-center align-items-center pt-5 sm-pt-30px">
+                    <!-- start divider -->
+                    <div class="col-12">
+                        <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
+                    </div>
+                    <!-- end divider -->
+                    <!-- start copyright -->
+                    <div class="col-lg-6 pt-25px pb-25px md-pt-0 fs-16 last-paragraph-no-margin order-2 order-lg-1 text-center text-lg-start"><p>&copy; 2024 Designed by <a href="https://www.idrillingtechnologies.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">iDrilling Technologies</a></p></div>
+                    <!-- end copyright -->
+                   
+                </div>
+            </div> 
+        </footer>
+        <!-- end footer -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/vendors.min.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+    </body>
+</html>

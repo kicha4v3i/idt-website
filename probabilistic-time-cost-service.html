@@ -1,0 +1,357 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Probabilistic Time Estimate | Monte Carlo method | iDrilling Technologies</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="krishna" content="probabilistic well time estimates | time vs depth">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+        <meta name="description" content="Use offset well data to develop a probabilistic time estimate for drilling wells. Use modern AI tools to develop a variance model to take strong decisions.">
+        <meta name="keywords" content="data science, time estimate, probabilistic models, monte carlo, probabilistic time estimate, statistical models, statistics">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon/favicon.png">
+        <link rel="apple-touch-icon" href="images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/favicon.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/favicon.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/responsive.css"/>
+        <link rel="stylesheet" href="css/consulting.css" />
+        <link rel="stylesheet" href="css/startup.css" />
+    </head>
+    <body data-mobile-nav-style="classic">  
+        <!-- start header -->
+        <header> 
+            <!-- start navigation -->
+            <nav class="navbar navbar-expand-lg header-transparent bg-transparent border-bottom border-color-transparent-white-light disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="header logo for idrilling technologies linking homepage" class="default-logo">
+                            <img src="images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="alternate header logo for idrilling technologies linking to homepage" class="alt-logo">
+                            <img src="images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="mobile header logo for idrilling technologies linking to homepage" class="mobile-logo">  
+                        </a>
+                    </div>
+                    <div class="col-auto menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav"> 
+                            <ul class="navbar-nav alt-font"> 
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="about-us.html" class="nav-link">About us</a></li>
+                                <li class="nav-item dropdown dropdown-with-icon">
+                                    <a href="idt-services-2.html" class="nav-link">Services</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li>
+                                            <a href="well-design-services.html"><i class="line-icon-Gear"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Well Design</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="engineering-modelling.html"><i class="line-icon-Compass-3"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Engineering Modelling</span>
+                                                    <p>Engineering Services</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="offset-well-service.html"><i class="line-icon-Bar-Chart"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Offset Well Analysis</span>
+                                                    <p>Data Analysis</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="drilling-program-services.html"><i class="line-icon-File-Presentation"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Back Office Support</span>
+                                                    <p>Execution Support</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="feasibility-studies-service.html"><i class="line-icon-Glasses-2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Feasibility Studies</span>
+                                                    <p>Drilling Assessment</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="probabilistic-time-cost-service.html"><i class="line-icon-Line-Chart2"></i>
+                                                <div class="submenu-icon-content">
+                                                    <span>Probabilistic Time Estimates</span>
+                                                    <p>Statistical Modelling</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="our-process.html" class="nav-link">Process</a></li>
+                                <li class="nav-item"><a href="idt-blog.html" class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-lg-2 text-end md-pe-0">
+                        <div class="header-icon">
+                            <div class="header-push-button icon">
+                                <div class="push-button">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span> 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+            <!-- end navigation -->
+            <!-- start push popup -->
+            <div class="push-menu push-menu-style-3 p-50px bg-dark-gray">
+                <span class="close-menu text-dark-gray bg-white"><i class="fa-solid fa-xmark"></i></span>
+                <div class="push-menu-wrapper text-dark-gray" data-scroll-options='{ "theme": "light" }'>
+                    <div class="w-100">
+                        <h4 class="alt-font text-white fw-400 mb-30px d-block w-90 lh-40">Well Engineering Consultancy for <span class="d-inline-block fw-600 border-3 border-bottom border-color-base-color">Oil & Gas Operators</span></h4>
+                    </div>
+                    <div class="col-12">
+                        <ul class="fs-20 ps-0 alt-font">
+                            <li class="pt-10px pb-10px w-100"><a class="text-white linkedin" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin w-30px text-start text-white"></i>Linked In</a></li>
+                        </ul>
+                    </div>
+                    <div class="border-top border-color-transparent-white-light pt-30px w-100">
+                        <span class="fs-24 fw-500 text-white"><a href="tel:971521494644">+971 52 149 4644</a></span>
+                        <a class="text-white" href="mailto:admin@idrillingtechnologies.com">admin@idrillingtechnologies.com</a>
+                    </div>
+                </div>
+            </div>
+            <!-- end push popup -->
+        </header>
+        <!-- end header -->
+        <!-- start page title -->
+        <section class="page-title-big-typography bg-dark-gray ipad-top-space-margin xs-py-0 cover-background background-position-center-top" style="background-image: url(images/work-images/time-estimate-cover.jpg)">
+            <div class="opacity-extra-medium bg-gradient-black-green"></div>
+            <div class="container">
+                <div class="row align-items-center justify-content-center small-screen">
+                    <div class="col-xl-8 col-lg-7 col-sm-8 position-relative text-center page-title-extra-small" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <div><h1 class="text-uppercase mb-15p text-white opacity-6 fw-400 ls-2px" data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["Probabilistic Time Estimates"], "duration": 400, "delay": 0, "speed": 50, "easing": "easeOutQuad" }'></h1></div>
+                        <h2 class="m-auto text-white text-shadow-double-large fw-500 w-90 xl-w-100" data-fancy-text='{ "opacity": [0, 1], "translateY": [50, 0], "filter": ["blur(20px)", "blur(0px)"], "string": ["Forecast well times with precision"], "duration": 400, "delay": 0, "speed": 50, "easing": "easeOutQuad" }'></h2>
+                    </div> 
+                    <div class="down-section text-center" data-anime='{ "translateY": [100, 0], "opacity": [0,1], "easing": "easeOutQuad" }'>
+                        <a href="#down-section" class="section-link">
+                            <div class="fs-30 sm-fs-32 text-white">
+                                <i class="bi bi-mouse"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end page title -->
+        <!-- start section -->  
+        <section id="down-section" class="background-position-center-top sm-background-image-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-2 order-lg-1" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <div class="bg-very-light-gray border-radius-6px p-50px lg-p-30px md-p-40px xs-p-30px mb-30px">
+                            <span class="fs-24 ls-minus-05px alt-font text-dark-gray fw-700 mb-10px xs-mb-5px d-inline-block">Our Services</span>
+                            <ul class="p-0 m-0 list-style-01">
+                                <li class="border-color-extra-medium-gray pt-10px pb-10px"><a href="well-design-services.html">Well Design</a></li>
+                                <li class="border-color-extra-medium-gray pt-10px pb-10px"><a href="engineering-modelling.html">Engineering Modelling</a></li>
+                                <li class="border-color-extra-medium-gray pt-10px pb-10px"><a href="offset-well-service.html">Offset Well Analysis</a></li>
+                                <li class="border-color-extra-medium-gray pt-10px pb-10px"><a href="drilling-program-services.html">Back Office Support</a></li>
+                                <li class="border-color-extra-medium-gray pt-10px pb-10px"><a href="feasibility-studies-service.html">Feasibility Studies</a></li>
+                                <li class="pt-10px"><a href="probabilistic-time-cost-service.html" class="text-base-color">Probabilistic Well Time Estimates</a></li> 
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-xl-7 offset-xl-1 col-lg-8 order-1 order-lg-2 md-mb-50px sm-mb-35px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <h4 class="text-dark-gray fw-700 ls-minus-1px alt-font mb-20px d-block">Data driven time estimates.</h4>
+                        <p>We simulate drilling time estimates using Monte Carlo simulations. By analyzing the time taken for operations in Offset wells we develop a probabilistic model that handles the variability in durations and perform Risk Assessment. Therefore, we quantify the probability of completing the well within a specific time frame. </p>
+                        <img src="images/work-images/time-estimate-small.jpeg" class="mt-30px lg-mt-15px mb-60px md-mb-40px border-radius-6px" alt="probabilistic time estimates for drilling.">
+                        <div class="row row-cols-1 row-cols-md-2 mb-30px md-mb-15px">
+                            <div class="col">
+                                <span class="fs-24 alt-font text-dark-gray ls-minus-05px fw-700 mb-15px d-block">Risked Models</span>
+                                <p class="w-95 sm-w-100">By doing your time esimates probabilistically, the risk factors are considered in the estimate along with its possibility of occurence. A range in time estimates gives you a opportunity to take informed decisions.</p>
+                            </div>
+                            <div class="col">
+                                <span class="fs-24 alt-font text-dark-gray ls-minus-05px fw-700 mb-15px d-block">Non-Productive Time Models</span>
+                                <p class="w-95 sm-w-100">A separate model for NPT is analysed and is modelled in the time estimates. By detailed study of offset wells, we can model NPT distributions which give us an idea on what to expect and come up with solutions to reduce NPT.</p>
+                            </div>
+                            
+                        </div>
+                        <span class="fs-24 alt-font text-dark-gray ls-minus-05px fw-700 mb-15px d-block">iDT's Probabilistic Model includes</span>
+                        
+                        <ul class="p-0 m-0 list-style-02">
+                            <li class="pb-10px d-flex"><i class="feather icon-feather-arrow-right-circle fs-20 text-base-color me-10px"></i>Risked and Unrisked Time Esimates</li>
+                            <li class="pb-10px d-flex"><i class="feather icon-feather-arrow-right-circle fs-20 text-base-color me-10px"></i>P10, P50 and P90 Estimates.</li>
+                            <li class="pb-10px d-flex"><i class="feather icon-feather-arrow-right-circle fs-20 text-base-color me-10px"></i>Non-Productive Time Analysis</li>
+                        </ul>
+                        
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+         <!-- start section -->
+         <section class="overflow-hidden bg-very-light-gray">
+            <div class="container">
+                <div class="row mb-7 justify-content-center">
+                    <div class="col-lg-4 md-mb-60px sm-mb-45px text-center text-lg-start" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <h3 class="text-dark-gray fw-600 ls-minus-2px w-80 xl-w-100 mb-15px">Our engineering expertise</h3>
+                        <p class="w-80 xl-w-100">We offer our expertise in a various drilling environments.</p>
+                        <a href="contact-us.html" class="btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge">Contact us!</a>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row row-cols-1 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                            <!-- start features box item -->
+                            <div class="col icon-with-text-style-01 mb-6 xs-mb-30px">
+                                <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
+                                    <div class="feature-box-icon">
+                                        <img width="55px" src="icons/normal-wells.svg">
+        
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="fs-20 fw-600 text-dark-gray d-block mb-5px">Normal wells</span>
+                                        <p>Normal temperature and pressure wells.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end features box item -->
+                            <!-- start features box item -->
+                            <div class="col icon-with-text-style-01 mb-6 xs-mb-30px">
+                                <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
+                                    <div class="feature-box-icon">
+                                        <img width="55px"  src="icons/erd-wells.svg">
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="fs-20 fw-600 text-dark-gray d-block mb-5px">ERD Wells</span>
+                                        <p>Engineering design, modelling and support for ERD wells.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end features box item -->
+                            <!-- start features box item -->
+                            <div class="col icon-with-text-style-01 sm-mb-6 xs-mb-30px">
+                                <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
+                                    <div class="feature-box-icon">
+                                        <i class="line-icon-Temperature-3 icon-extra-large text-base-color"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="fs-20 fw-600 text-dark-gray d-block mb-5px">HPHT & Deepwater</span>
+                                        <p>Specialized engineering services for challenging environments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end features box item -->
+                            <!-- start features box item -->
+                            <div class="col icon-with-text-style-01">
+                                <div class="feature-box feature-box-left-icon last-paragraph-no-margin">
+                                    <div class="feature-box-icon">
+                                        <i class="line-icon-Archery-2 icon-extra-large text-base-color"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="fs-20 fw-600 text-dark-gray d-block mb-5px">Exploration Wells</span>
+                                        <p>Well planning and development strategies to tap unexplored regions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end features box item -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                    <div class="col-12 fs-22 fw-500 ls-minus-1px text-dark-gray text-center">
+                        For any queries on our services, write to us at <a class="text-dark-gray text-decoration-line-bottom" href="mailto:admin@idrillingtechnologies.com">admin@idrillingtechnologies.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start footer -->
+        <footer class="footer-light p-0 position-relative">
+            <div id="particles-04" class="position-absolute h-100 top-0 left-0 z-index-minus-1 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 5,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#b7b9be", "#dd6531"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.5,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
+            <div class="container"> 
+                <div class="row justify-content-between pt-7 sm-pt-50px">
+                    <!-- start footer column -->
+                    <div class="col-7 col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start md-mb-30px">
+                        <a href="index.html" class="footer-logo mb-15px md-mb-20px d-inline-block"><img src="images/iDT Logo - Transparent Background.png" data-at2x="images/iDT Logo - Transparent Background.png" alt="idrilling technologies logo"></a>
+                        <p class="mb-20px">Efficiency and value delivered remotely.</p>
+                        <div class="elements-social social-icon-style-02">
+                            <ul class="medium-icon dark icon-with-animation">
+                                <li><a class="facebook" href="https://www.linkedin.com/company/idrilling-technologies/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-5 col-lg-2 offset-xl-1 col-md-3 col-sm-6 md-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Company</span>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="idt-services-2.html">Services</a></li>
+                            <li><a href="our-process.html">Process</a></li>
+                            <li><a href="idt-blog.html">Blog</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    <div class="col-lg-3 col-md-4 col-sm-6 xs-mb-30px">
+                        <span class="alt-font d-block text-dark-gray fw-600 mb-10px fs-19">Get in touch</span>
+                        
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-phone-call text-dark-gray icon-small me-10px"></i></span><a href="tel:971521494644">+971 52 149 4644</a></p>
+                        <p class="m-0 fs-15"><span class="fw-600"><i class="feather icon-feather-mail text-dark-gray icon-small me-10px"></i></span><a href="mailto:admin@idrillingtechnologies.com">admin@idrillingtechnologies.com</a></p>
+                    </div>
+                    <!-- end footer column -->
+                    <!-- start footer column -->
+                    
+                    <!-- end footer column -->
+                </div> 
+                <div class="row justify-content-center align-items-center pt-5 sm-pt-30px">
+                    <!-- start divider -->
+                    <div class="col-12">
+                        <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
+                    </div>
+                    <!-- end divider -->
+                    <!-- start copyright -->
+                    <div class="col-lg-6 pt-25px pb-25px md-pt-0 fs-16 last-paragraph-no-margin order-2 order-lg-1 text-center text-lg-start"><p>&copy; 2024 Designed by <a href="https://www.idrillingtechnologies.com/" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">iDrilling Technologies</a></p></div>
+                    <!-- end copyright -->
+                   
+                </div>
+            </div> 
+        </footer>
+        <!-- end footer -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+          <a href="#" class="scroll-top" aria-label="scroll">
+            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+          </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
